@@ -12,6 +12,9 @@
 #include "util.h"
 
 
+#define SECTOR_SIZE 512
+#define NUM_SECTORS 256
+
 void get_input(uint8_t *response){
     scanf("%"SCNd8, response);
 }
@@ -25,7 +28,12 @@ void print_menu(){
 bool handle_response(uint8_t response){
     switch(response){
         case 1:
-            format();
+            char* fileName = malloc(sizeof(char)*100);
+            printf("Please enter the name of the file that contains the file system ");
+            scanf("%99s", fileName);
+            format(fileName);
+            free(fileName);
+            fileName = NULL;
             break;
         case 14:
             return false;

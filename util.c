@@ -8,12 +8,16 @@
 
 #include "util.h"
 
-int8_t format(){
-    char* fileName = malloc(sizeof(char)*100);
+int8_t format(char* fileName){
+    FILE *fp;
     
-    printf("Please enter the name of the file that contains the file system ");
-    scanf("%99s", fileName);
-    printf("%s is the filename\n", fileName);
-    free(fileName);
+    fp = fopen(fileName, "w+");
+    
+    printf(SECTOR_SIZE);
+    
+    
+    
+    
+
     return 0;
 }
