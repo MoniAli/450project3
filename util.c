@@ -13,6 +13,6 @@ int8_t format(){
     
     printf("Please enter the name of the file that contains the file system ");
     scanf("%s", fileName);
-    printf("%s is the filename\n", fileName);
+    //printf("%s is the filename\n", fileName);
     return 0;
 }
