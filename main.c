@@ -28,11 +28,13 @@ int main(int argc,char** argv){
         switch(response){
             case 1:
                 format("Hello");
+                response = 0;
                 break;
             case 14:
                 return 0;
                 break;
             default:
+                printf("Invalid response, try again\n");
                 response = 0;
                 break;
                 
