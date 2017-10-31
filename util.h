@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include <stdint.h>
 
-int8_t format(char* fileName);
+int8_t format();
 
 #endif /* util_h */
