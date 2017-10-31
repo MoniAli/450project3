@@ -9,10 +9,10 @@
 #include "util.h"
 
 int8_t format(){
-    char fileName[50];
+    char fileName[50] = {0};
     
     printf("Please enter the name of the file that contains the file system ");
-    scanf_s("%49s", &fileName, 50);
+    scanf("%49s", fileName);
     printf("MADE IT HERE\n");
     //printf("%s is the filename\n", fileName);
     return 0;
