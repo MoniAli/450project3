@@ -13,7 +13,7 @@ int8_t format(char* fileName){
     
     fp = fopen(fileName, "w+");
     
-    char* data = malloc(NUM_SECTORS * SECTOR_SIZE);
+    char* data = malloc(sizeof(char) * (NUM_SECTORS * SECTOR_SIZE));
 
     
     fwrite(data, 1, sizeof(data), fp);
