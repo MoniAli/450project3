@@ -13,7 +13,7 @@ int8_t format(char* fileName){
     
     fp = fopen(fileName, "w+");
     
-    printf(SECTOR_SIZE);
+    printf("%d", SECTOR_SIZE);
     
     
     
