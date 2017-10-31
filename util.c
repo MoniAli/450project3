@@ -18,7 +18,7 @@ int8_t format(char* fileName){
         data[i] = 'x';
     }
     
-    fwrite(data, sizeof(char), sizeof(data), fp);
+    fwrite(data, sizeof(char), sizeof(NUM_SECTORS * SECTOR_SIZE), fp);
 
     return 0;
 }
