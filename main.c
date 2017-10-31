@@ -14,7 +14,7 @@
 
 void get_input(int8_t *response){
     scanf("%"SCNd8, response);
-    printf("%d", response)
+    printf("%d", response);
 }
 
 void print_menu(){
