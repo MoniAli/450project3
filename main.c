@@ -14,7 +14,6 @@
 
 void get_input(uint8_t *response){
     scanf("%"SCNd8, response);
-    printf("%hhd is the int", *response);
 }
 
 void print_menu(){
