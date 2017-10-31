@@ -12,4 +12,6 @@
 #include <stdio.h>
 #include <stint.h>
 
+int8_t format(char* fileName);
+
 #endif /* util_h */

@@ -9,5 +9,5 @@
 #include "util.h"
 
 int8_t format(char* fileName){
-    return -1
+    return -1;
 }
