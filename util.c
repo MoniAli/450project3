@@ -14,9 +14,11 @@ int8_t format(char* fileName){
     fp = fopen(fileName, "w+");
     
     char* data = malloc(sizeof(char) * (NUM_SECTORS * SECTOR_SIZE));
-
+    for (int i = 0; i < sizeof(char) * (NUM_SECTORS * SECTOR_SIZE); i++){
+        data[i] = 'x';
+    }
     
-    fwrite(data, 1, sizeof(data), fp);
+    fwrite(data, sizeof(char), sizeof(data), fp);
 
     return 0;
 }
