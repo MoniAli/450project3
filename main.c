@@ -24,10 +24,7 @@ void print_menu(){
 int8_t handle_response(uint8_t response){
     switch(response){
         case 1:
-            printf("Please enter the name of the file that contains the file system ");
-            char* fileName;
-            scanf("%s", fileName);
-            format(fileName);
+            format();
             break;
         case 14:
             return -1;

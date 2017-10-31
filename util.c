@@ -8,7 +8,11 @@
 
 #include "util.h"
 
-int8_t format(char* fileName){
+int8_t format(){
+    char* fileName;
+    
+    printf("Please enter the name of the file that contains the file system ");
+    scanf("%s", fileName);
     printf("%s is the filename\n", fileName);
-    return -1;
+    return 0;
 }
