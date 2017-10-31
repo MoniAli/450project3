@@ -12,7 +12,7 @@
 
 int main(int argc,char** argv){
     uint8_t response;
-    while (true):
+    while (true){
         printf("Menu of options:\n");
         printf("    1) Format\n");
         printf("    14) Exit the program\n");
@@ -20,9 +20,10 @@ int main(int argc,char** argv){
     
         get_input(&response);
         printf("%d", response);
+    }
     
 }
 
-void get_input(){
+void get_input(response){
     scanf("%d", response);
 }
