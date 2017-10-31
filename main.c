@@ -25,7 +25,17 @@ int main(int argc,char** argv){
     
     
         get_input(&response);
-        printf("%d", response);
+        switch(response){
+            case 1:
+                format("Hello");
+                break;
+            case 14:
+                return 0;
+                break;
+            default:
+                break;
+                
+        }
     }
     
 }

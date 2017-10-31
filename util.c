@@ -9,5 +9,6 @@
 #include "util.h"
 
 int8_t format(char* fileName){
+    printf("%s is the filename", fileName);
     return -1;
 }
