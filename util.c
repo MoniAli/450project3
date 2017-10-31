@@ -13,11 +13,10 @@ int8_t format(char* fileName){
     
     fp = fopen(fileName, "w+");
     
-    printf("%d", SECTOR_SIZE);
+    char* array = ['a','b','c','d']
+
     
-    
-    
-    
+    fwrite(array, sizeof(char), sizeof(array), fp);
 
     return 0;
 }
