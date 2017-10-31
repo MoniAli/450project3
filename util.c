@@ -13,7 +13,7 @@ int8_t format(char* fileName){
     
     fp = fopen(fileName, "w+");
     
-    char* array = ['a','b','c','d']
+    char* array = {'a','b','c','d'}
 
     
     fwrite(array, sizeof(char), sizeof(array), fp);
