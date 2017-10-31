@@ -12,7 +12,7 @@
 
 
 void get_input(int8_t *response){
-    scanf("%d", response);
+    scanf("%hhd", response);
 }
 
 
@@ -25,7 +25,7 @@ int main(int argc,char** argv){
     
     
         get_input(&response);
-        printf("%hhd", response);
+        printf("%d", response);
     }
     
 }
