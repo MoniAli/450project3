@@ -20,7 +20,7 @@ int8_t format(char* fileName){
     }
     printf("%ld", sizeof(*data));
     
-    fwrite(data, 1, sizeof(NUM_SECTORS * SECTOR_SIZE), fp);
+    fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
     return 0;
 }
