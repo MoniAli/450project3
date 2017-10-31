@@ -34,7 +34,6 @@ int8_t handle_response(uint8_t response){
             break;
         default:
             printf("Invalid response, try again\n");
-            response = 0;
             break;
     }
     return 0;
