@@ -21,14 +21,14 @@ void print_menu(){
     printf("    14) Exit the program\n");
 }
 
-void handle_response(uint8_t response){
+bool handle_response(uint8_t response){
     switch(response){
         case 1:
             format("Hello");
             response = 0;
             break;
         case 14:
-            return;
+            return true;
             break;
         default:
             printf("Invalid response, try again\n");
@@ -40,10 +40,12 @@ void handle_response(uint8_t response){
 
 int main(int argc,char** argv){
     uint8_t response;
-    while (true){
+    bool ended;
+    ended = false;
+    while (!ended){
         print_menu();
         get_input(&response);
-        handle_response(response);
+        ended = handle_response(response);
     }
     return 0;
 }
