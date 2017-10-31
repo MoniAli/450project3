@@ -13,7 +13,7 @@ int8_t format(char* fileName){
     
     fp = fopen(fileName, "w+");
     
-    char* data = malloc(sizeof(NUM_SECTORS * SECTOR_SIZE));
+    char data[NUM_SECTORS * SECTOR_SIZE];
     for (int i = 0; i < sizeof(NUM_SECTORS * SECTOR_SIZE); i++){
         data[i] = 'x';
     }
