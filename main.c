@@ -13,6 +13,7 @@
 
 
 void get_input(int8_t *response){
+    printf("MADE IT HERE");
     scanf("%"SCNd8, response);
     printf("%hhd is the int", *response);
 }
