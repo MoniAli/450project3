@@ -28,7 +28,7 @@ void handle_response(uint8_t response){
             response = 0;
             break;
         case 14:
-            return 0;
+            return;
             break;
         default:
             printf("Invalid response, try again\n");
@@ -45,5 +45,5 @@ int main(int argc,char** argv){
         get_input(&response);
         handle_response(response);
     }
-    
+    return 0;
 }
