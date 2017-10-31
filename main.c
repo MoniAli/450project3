@@ -27,7 +27,7 @@ bool handle_response(uint8_t response){
             printf("Please enter the name of the file that contains the file system ");
             char* fileName;
             scanf("%s", fileName);
-            format(&fileName);
+            format(fileName);
             response = 0;
             break;
         case 14:
