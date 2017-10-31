@@ -12,7 +12,7 @@
 
 
 void get_input(int8_t *response){
-    scanf("%hhd", response);
+    scanf("%" SCNd8, response);
 }
 
 void print_menu(){
