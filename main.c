@@ -25,7 +25,7 @@ int main(int argc,char** argv){
     
     
         get_input(&response);
-        printf("%d", response);
+        printf("%hhd", response);
     }
     
 }
