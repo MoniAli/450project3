@@ -12,9 +12,8 @@ int8_t format(char* fileName){
     FILE *fp;
     
     fp = fopen(fileName, "w+");
-    printf("%d", NUM_SECTORS*SECTOR_SIZE);
     
-    char* data = malloc(sizeof(char) * (NUM_SECTORS * SECTOR_SIZE));
+    char* data = malloc(sizeof(NUM_SECTORS * SECTOR_SIZE));
     for (int i = 0; i < sizeof(char) * (NUM_SECTORS * SECTOR_SIZE); i++){
         data[i] = 'x';
     }
