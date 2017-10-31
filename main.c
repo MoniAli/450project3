@@ -13,7 +13,7 @@
 
 void get_input(int8_t *response){
     scanf("%hhd", response);
-    printf("%d is the response", &response)
+    printf("%d is the response", &response);
 }
 
 void print_menu(){
