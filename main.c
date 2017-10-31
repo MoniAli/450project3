@@ -28,7 +28,6 @@ bool handle_response(uint8_t response){
             char* fileName;
             scanf("%s", fileName);
             format(fileName);
-            response = 0;
             break;
         case 14:
             return true;
