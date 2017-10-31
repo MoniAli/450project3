@@ -13,7 +13,6 @@
 
 void get_input(int8_t *response){
     scanf("%hhd", response);
-    printf("%hhd is the response", response);
 }
 
 void print_menu(){
@@ -39,7 +38,7 @@ int8_t handle_response(uint8_t response){
 }
 
 int main(int argc,char** argv){
-    uint8_t response;
+    int8_t response;
     int8_t ended;
     ended = 1;
     while (ended){
