@@ -21,7 +21,7 @@ void print_menu(){
     printf("    14) Exit the program\n");
 }
 
-bool handle_response(uint8_t response){
+int8_t handle_response(uint8_t response){
     switch(response){
         case 1:
             printf("Please enter the name of the file that contains the file system ");
@@ -30,22 +30,22 @@ bool handle_response(uint8_t response){
             format(fileName);
             break;
         case 14:
-            return true;
+            return -1;
             break;
         default:
             printf("Invalid response, try again\n");
             response = 0;
             break;
     }
-    return false;
+    return 0;
     
 }
 
 int main(int argc,char** argv){
     uint8_t response;
-    bool ended;
-    ended = false;
-    while (!ended){
+    int8_t ended;
+    ended = 0;
+    while (ended != -1){
         print_menu();
         get_input(&response);
         ended = handle_response(response);
