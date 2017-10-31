@@ -17,8 +17,9 @@ int8_t format(char* fileName){
     for (int i = 0; i < sizeof(NUM_SECTORS * SECTOR_SIZE); i++){
         data[i] = 'x';
     }
+    printf("%d", sizeof(*data));
     
-    fwrite(data, sizeof(char), sizeof(NUM_SECTORS * SECTOR_SIZE), fp);
+    fwrite(data, 1, sizeof(NUM_SECTORS * SECTOR_SIZE), fp);
 
     return 0;
 }
