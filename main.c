@@ -24,6 +24,6 @@ int main(int argc,char** argv){
     
 }
 
-void get_input(response){
+void get_input(int8_t *response){
     scanf("%d", response);
 }
