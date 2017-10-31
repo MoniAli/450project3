@@ -8,11 +8,13 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <inttypes.h>
 #include "util.h"
 
 
 void get_input(int8_t *response){
-    scanf("%" SCNd8, response);
+    scanf("%"SCNd8, response);
+    printf("%d", response)
 }
 
 void print_menu(){
