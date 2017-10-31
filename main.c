@@ -27,21 +27,21 @@ int8_t handle_response(uint8_t response){
             format();
             break;
         case 14:
-            return -1;
+            return 0;
             break;
         default:
             printf("Invalid response, try again\n");
             break;
     }
-    return 0;
+    return 1;
     
 }
 
 int main(int argc,char** argv){
     uint8_t response;
     int8_t ended;
-    ended = 0;
-    while (ended != -1){
+    ended = 1;
+    while (ended){
         print_menu();
         get_input(&response);
         ended = handle_response(response);
