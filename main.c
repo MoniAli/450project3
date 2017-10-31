@@ -12,8 +12,7 @@
 #include "util.h"
 
 
-void get_input(int8_t *response){
-    printf("MADE IT HERE");
+void get_input(uint8_t *response){
     scanf("%"SCNd8, response);
     printf("%hhd is the int", *response);
 }
@@ -24,30 +23,30 @@ void print_menu(){
     printf("    14) Exit the program\n");
 }
 
-int8_t handle_response(int8_t response){
+bool handle_response(uint8_t response){
     switch(response){
         case 1:
             format();
             break;
         case 14:
-            return 0;
+            return false;
             break;
         default:
             printf("Invalid response, try again\n");
             break;
     }
-    return 1;
+    return true;
     
 }
 
 int main(int argc,char** argv){
-    int8_t response;
-    int8_t ended;
-    ended = 1;
-    while (ended){
+    uint8_t response;
+    bool going = true;
+    
+    while (going){
         print_menu();
         get_input(&response);
-        ended = handle_response(response);
+        going = handle_response(response);
     }
     return 0;
 }
