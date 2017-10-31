@@ -10,7 +10,7 @@
 #define util_h
 
 #include <stdio.h>
-#include <stint.h>
+#include <stdint.h>
 
 int8_t format(char* fileName);
 
