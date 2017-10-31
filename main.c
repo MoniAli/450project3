@@ -24,7 +24,7 @@ void print_menu(){
     printf("    14) Exit the program\n");
 }
 
-int8_t handle_response(uint8_t response){
+int8_t handle_response(int8_t response){
     switch(response){
         case 1:
             format();
