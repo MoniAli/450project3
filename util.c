@@ -14,7 +14,7 @@ int8_t format(char* fileName){
     fp = fopen(fileName, "w+");
     
     char data[NUM_SECTORS * SECTOR_SIZE];
-    for (int i = 0; i < sizeof(NUM_SECTORS * SECTOR_SIZE); i++){
+    for (int i = 0; i < NUM_SECTORS * SECTOR_SIZE; i++){
         printf("%d", i);
         data[i] = 'x';
     }
