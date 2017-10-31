@@ -16,7 +16,7 @@ int8_t format(char* fileName){
     char data[NUM_SECTORS * SECTOR_SIZE];
     for (int i = 0; i < NUM_SECTORS * SECTOR_SIZE; i++){
         printf("%d", i);
-        data[i] = itoa(i);
+        data[i] = '0';
     }
     printf("%ld", sizeof(*data));
     
