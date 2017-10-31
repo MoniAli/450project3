@@ -12,7 +12,7 @@ int8_t format(){
     char fileName[50];
     
     printf("Please enter the name of the file that contains the file system ");
-    scanf("%50s", &fileName);
+    scanf_s("%49s", &fileName, 50);
     printf("MADE IT HERE\n");
     //printf("%s is the filename\n", fileName);
     return 0;
