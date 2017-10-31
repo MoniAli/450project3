@@ -10,6 +10,12 @@
 #include <stdbool.h>
 #include "util.h"
 
+
+void get_input(int8_t *response){
+    scanf("%d", response);
+}
+
+
 int main(int argc,char** argv){
     uint8_t response;
     while (true){
@@ -22,8 +28,4 @@ int main(int argc,char** argv){
         printf("%d", response);
     }
     
-}
-
-void get_input(int8_t *response){
-    scanf("%d", response);
 }
