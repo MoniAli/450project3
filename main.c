@@ -15,6 +15,12 @@
 void get_input(uint8_t *response){
     char* buffer = malloc(sizeof(char)*10);
     fgets(buffer, 10, stdin);
+    for (int8_t i = 0; i < 10; i++){
+        if (!isdigit(buffer[i])){
+            response = 0;
+        }
+    }
+    response = atoi(buffer);
     printf("%s", buffer);
     
 }
