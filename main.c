@@ -16,19 +16,18 @@
 void get_input(uint8_t *response){
     char* buffer = malloc(sizeof(char)*10);
     fgets(buffer, 10, stdin);
+    bool alpha = false;
     for (int8_t i = 0; i < 10; i++){
         if (!isdigit(buffer[i])){
-            if (buffer[i] != '\0'){
-            *response = 0;
-            printf("IN HERE with %s and i is %d\n", &buffer[i], i);
-            free(buffer);
-            buffer = NULL;
-            return;
-            }
-            else{
-                break;
+            alpha = true;
             }
         }
+    }
+    if (alpha){
+        *response = 0;
+        free(buffer);
+        buffer = NULL;
+        return;
     }
     *response = atoi(buffer);
     printf("%s", buffer);
