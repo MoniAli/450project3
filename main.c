@@ -27,13 +27,13 @@ void get_input(uint8_t *response){
     if (alpha){
         *response = 0;
         free(buffer);
-        buffer = NULL;
+        *buffer = NULL;
         return;
     }
     *response = atoi(buffer);
     printf("%s", buffer);
     free(buffer);
-    buffer = NULL;
+    *buffer = NULL;
     
 }
 
