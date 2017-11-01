@@ -25,6 +25,9 @@ void get_input(uint8_t *response){
             buffer = NULL;
             return;
             }
+            else{
+                break;
+            }
         }
     }
     *response = atoi(buffer);
