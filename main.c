@@ -19,6 +19,7 @@ void get_input(uint8_t *response){
     for (int8_t i = 0; i < 10; i++){
         if (!isdigit(buffer[i])){
             *response = 0;
+            return;
         }
     }
     *response = atoi(buffer);
