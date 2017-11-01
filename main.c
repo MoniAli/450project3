@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <inttypes.h>
+#include <ctype.h>
 #include "util.h"
 #include "macros.h"
 
