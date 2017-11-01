@@ -17,10 +17,11 @@ void get_input(uint8_t *response){
     char* buffer = malloc(sizeof(char)*10);
     fgets(buffer, 10, stdin);
     bool alpha = false;
-    for (int8_t i = 0; i < 10; i++){
+    int8_t i = 0;
+    while (buffer[i] != '\0\' && i != 0){
         if (!isdigit(buffer[i])){
             alpha = true;
-            }
+        }
     }
 
     if (alpha){
