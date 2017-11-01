@@ -20,6 +20,7 @@ void get_input(uint8_t *response){
         if (!isdigit(buffer[i])){
             if (buffer[i] != '\0'){
             *response = 0;
+            printf("IN HERE\n");
             return;
             }
         }
