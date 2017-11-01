@@ -21,12 +21,16 @@ void get_input(uint8_t *response){
             if (buffer[i] != '\0'){
             *response = 0;
             printf("IN HERE\n");
+            free(buffer);
+            buffer = NULL;
             return;
             }
         }
     }
     *response = atoi(buffer);
     printf("%s", buffer);
+    free(buffer);
+    buffer = NULL;
     
 }
 
