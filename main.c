@@ -13,7 +13,10 @@
 #include "macros.h"
 
 void get_input(uint8_t *response){
-    scanf("%"SCNd8, response);
+    char* buffer = malloc(sizeof(char)*10);
+    fgets(buffer, 10, stdin);
+    printf("%s", buffer);
+    
 }
 
 void print_menu(){
