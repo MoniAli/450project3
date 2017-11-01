@@ -18,8 +18,10 @@ void get_input(uint8_t *response){
     fgets(buffer, 10, stdin);
     for (int8_t i = 0; i < 10; i++){
         if (!isdigit(buffer[i])){
+            if (buffer[i] != '\0'){
             *response = 0;
             return;
+            }
         }
     }
     *response = atoi(buffer);
