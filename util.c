@@ -25,7 +25,8 @@ int8_t format(char* fileName){
     for (i = 0; i < 246; i++){
         sb.datablock_stats[i] = 0;
     }
-    fwrite(&sb.magic, 1, 4, fp);
+    
+    fwrite(&sb.magic, 1, 4, fp);
     
    // fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
