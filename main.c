@@ -36,6 +36,7 @@ void get_input(uint8_t *response){
 }
 
 void print_menu(){
+    fflush(stdin);
     printf("Menu of options:\n");
     printf("    1) Format\n");
     printf("    14) Exit the program\n");
