@@ -19,6 +19,7 @@ void get_input(uint8_t *response){
     bool alpha = false;
     int8_t i = 0;
     while (buffer[i] != '\0' && i != 10){
+        printf("%c ", buffer[i]);
         if (!isdigit(buffer[i])){
             alpha = true;
         }
