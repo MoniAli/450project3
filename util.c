@@ -10,7 +10,7 @@
 
 int8_t format(char* fileName){
     FILE *fp;
-    
+    int i;
     fp = fopen(fileName, "wb");
     
     superBlock_t sb = {0, 0, 0, 0, NULL, NULL};
@@ -19,10 +19,10 @@ int8_t format(char* fileName){
     sb.inode_count = 9;
     *sb.inode_stats = malloc(sizeof(char)*144);
     *sb.datablock_stats = malloc(sizeof(char)*246);
-    for (int8_t i = 0; i < 144; i++){
+    for (i = 0; i < 144; i++){
         sb.inode_stats[i] = 0;
     }
-    for (int8_t i = 0; i < 246; i++){
+    for (i = 0; i < 246; i++){
         sb.datablock_stats[i] = 0;
     }
     
