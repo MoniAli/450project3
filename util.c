@@ -26,12 +26,7 @@ int8_t format(char* fileName){
         sb.datablock_stats[i] = 0;
     }
     
-    fwrite(&sb.magic, 4, 1, fp);
-
-    rewind(fp);
-    uint32_t magic;
-    fread(&magic, 4, 1, fp);
-    printf("What we read was %x\n", magic);
+    fwrite(&sb, sizeof(sb), 1, fp);
     
    // fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
