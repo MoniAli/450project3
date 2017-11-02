@@ -31,6 +31,7 @@ void get_input(uint8_t *response){
         free(buffer);
         return;
     }
+    printf("MADE IT HERE\n");
     *response = atoi(buffer);
     printf("%s", buffer);
     free(buffer);
