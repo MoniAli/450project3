@@ -15,7 +15,7 @@ int8_t format(char* fileName){
     
     char data[NUM_SECTORS * SECTOR_SIZE];
     for (int i = 0; i < NUM_SECTORS * SECTOR_SIZE; i++){
-        data[i] = 1;
+        data[i] = (int8_t)1;
     }
     
     
