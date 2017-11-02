@@ -26,7 +26,7 @@ int8_t format(char* fileName){
         sb.datablock_stats[i] = 0;
     }
     
-    fwrite(&sb, sizeof(sb), 1, fp);
+    fwrite(sb.inode_stats, 1, 144, fp);
     
    // fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
