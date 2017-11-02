@@ -33,6 +33,7 @@ int8_t format(char* fileName){
     fwrite(&sb.datablock_count, 4, 1, fp);
     fwrite(sb.inode_stats, 1, 144, fp);
     fwrite(sb.datablock_stats, 1, 246, fp);
+    fwrite(0, 106, 1, fp);
     
    // fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
