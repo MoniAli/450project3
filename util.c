@@ -27,9 +27,8 @@ int8_t format(char* fileName){
     }
     
     fwrite(&sb.magic, 4, 1, fp);
-    fclose(fp);
-    fp = fopen(fileName, "r");
-    //fseek(fp, 0, SEEK_SET);
+
+    rewind(fp);
     uint32_t magic;
     fread(&magic, 4, 1, fp);
     printf("What we read was %x\n", magic);
