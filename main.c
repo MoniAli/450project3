@@ -18,11 +18,12 @@ void get_input(uint8_t *response){
     fgets(buffer, 10, stdin);
     bool alpha = false;
     int8_t i = 0;
-    while (buffer[i] != '\0\' && i != 0){
+    while (buffer[i] != '\0' && i != 10){
         if (!isdigit(buffer[i])){
             alpha = true;
         }
     }
+           
 
     if (alpha){
         *response = 0;
@@ -31,7 +32,7 @@ void get_input(uint8_t *response){
     }
     *response = atoi(buffer);
     printf("%s", buffer);
-    free(buffer); 
+    free(buffer);
 }
 
 void print_menu(){
