@@ -13,13 +13,19 @@ int8_t format(char* fileName){
     
     fp = fopen(fileName, "wb");
     
-    char data[NUM_SECTORS * SECTOR_SIZE];
-    for (int i = 0; i < NUM_SECTORS * SECTOR_SIZE; i++){
-        data[i] = 0x41;
+    superBlock_t sb = {0, 0, 0, 0, NULL, NULL};
+    sb.magic = 0xDEADBEEF;
+    sb.size = 1;
+    sb.inode_count = 9;
+    for (int8_t i = 0; i < 144; i++){
+        sb.inode_stats[i] = 0;
+    }
+    for (int8_t i = 0; i < 246; i++){
+        sb.datablock_stats[i] = 0;
     }
     
     
-    fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
+   // fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
     return 0;
 }
