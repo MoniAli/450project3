@@ -11,14 +11,14 @@
 int8_t format(char* fileName){
     FILE *fp;
     
-    fp = fopen(fileName, "w+");
+    fp = fopen(fileName, "wb");
     
     char data[NUM_SECTORS * SECTOR_SIZE];
     for (int i = 0; i < NUM_SECTORS * SECTOR_SIZE; i++){
         printf("%d", i);
         data[i] = '0';
     }
-    printf("%ld", sizeof(*data));
+    
     
     fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
