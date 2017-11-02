@@ -14,8 +14,8 @@
 #include "macros.h"
 
 
-char* mount_success = "The file has successfully been mounted";
-char* mount_fail = "The file failed to mount";
+char* f_success = "The file has successfully been formatted";
+char* f_fail = "The file failed to format";
 
 void get_input(uint8_t *response){
     char* buffer = malloc(sizeof(char)*10);
@@ -58,7 +58,7 @@ bool handle_response(uint8_t response){
             fileName = malloc(sizeof(char)*100);
             printf("Please enter the name of the file that contains the file system ");
             scanf("%99s", fileName);
-            printf("%s\n", format(fileName) == 0 ? mount_success : mount_fail);
+            printf("%s\n", format(fileName) == 0 ? f_success : f_fail);
             free(fileName);
             fileName = NULL;
             clear_input();
