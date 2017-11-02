@@ -26,7 +26,7 @@ int8_t format(char* fileName){
         sb.datablock_stats[i] = 0;
     }
     
-    fwrite(&sb.magic, 1, 4, fp);
+    fwrite(&sb.magic, 4, 1, fp);
     fseek(fp, 0, SEEK_SET);
     uint32_t magic;
     fread(&magic, 4, 1, fp);
