@@ -29,7 +29,7 @@ int8_t format(char* fileName){
     fwrite(&sb.magic, 4, 1, fp);
     fseek(fp, 0, SEEK_SET);
     uint32_t magic;
-    fread(&magic, 1, 4, fp);
+    fread(&magic, 4, 1, fp);
     printf("What we read was %x\n", magic);
     
    // fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
