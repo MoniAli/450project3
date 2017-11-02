@@ -52,7 +52,7 @@ bool handle_response(uint8_t response){
             format(fileName);
             free(fileName);
             fileName = NULL;
-            fflush(stdin);
+            while (getchar() != '\n'){}
             break;
         case 14:
             return false;
