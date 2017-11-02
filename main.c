@@ -71,6 +71,7 @@ int main(int argc,char** argv){
     
     while (going){
         print_menu();
+        response = 0;
         get_input(&response);
         going = handle_response(response);
     }
