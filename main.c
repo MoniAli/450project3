@@ -54,7 +54,7 @@ bool handle_response(uint8_t response){
             fileName = malloc(sizeof(char)*100);
             printf("Please enter the name of the file that contains the file system ");
             scanf("%99s", fileName);
-            format(fileName);
+            printf("%s\n", format(fileName) == 0 ? "The file has successfully been mounted" : "There was an error mounting the file";
             free(fileName);
             fileName = NULL;
             clear_input();
