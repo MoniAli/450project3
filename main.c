@@ -18,7 +18,7 @@ void get_input(uint8_t *response){
     fgets(buffer, 10, stdin);
     bool alpha = false;
     int8_t i = 0;
-    while (buffer[i] != '\0' && i != 10){
+    while (buffer[i] != '\0' && i != 10 && buffer[i] != '\n'){
         printf("%c |", buffer[i]);
         if (!isdigit(buffer[i])){
             alpha = true;
