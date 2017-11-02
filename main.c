@@ -24,7 +24,7 @@ void get_input(uint8_t *response){
         }
         i++;
     }
-           
+    printf("the buffer is %s\n", buffer);
 
     if (alpha){
         *response = 0;
