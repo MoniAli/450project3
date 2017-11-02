@@ -17,8 +17,8 @@ int8_t format(char* fileName){
     sb.magic = 0xDEADBEEF;
     sb.size = 1;
     sb.inode_count = 9;
-    sb.*inode_stats = malloc(sizeof(char)*144);
-    sb.*datablock_stats = malloc(sizeof(char)*246);
+    *sb.inode_stats = malloc(sizeof(char)*144);
+    *sb.datablock_stats = malloc(sizeof(char)*246);
     for (int8_t i = 0; i < 144; i++){
         sb.inode_stats[i] = 0;
     }
