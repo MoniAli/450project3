@@ -28,7 +28,7 @@ int8_t format(char* fileName){
     
     fwrite(&sb.magic, 4, 1, fp);
     fclose(fp);
-    fp = fopen(fileName, "wb");
+    fp = fopen(fileName, "r");
     //fseek(fp, 0, SEEK_SET);
     uint32_t magic;
     fread(&magic, 4, 1, fp);
