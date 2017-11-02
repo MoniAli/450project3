@@ -27,14 +27,11 @@ void get_input(uint8_t *response){
     if (alpha){
         *response = 0;
         free(buffer);
-        *buffer = NULL;
         return;
     }
     *response = atoi(buffer);
     printf("%s", buffer);
-    free(buffer);
-    *buffer = NULL;
-    
+    free(buffer); 
 }
 
 void print_menu(){
