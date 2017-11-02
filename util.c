@@ -20,10 +20,10 @@ int8_t format(char* fileName){
     sb.inode_stats = malloc(sizeof(char)*144);
     sb.datablock_stats = malloc(sizeof(char)*246);
     for (int8_t i = 0; i < 144; i++){
-        sb->inode_stats[i] = 0;
+        sb.inode_stats[i] = 0;
     }
     for (int8_t i = 0; i < 246; i++){
-        sb->datablock_stats[i] = 0;
+        sb.datablock_stats[i] = 0;
     }
     
     
