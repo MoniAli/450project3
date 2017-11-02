@@ -30,7 +30,7 @@ int8_t format(char* fileName){
     fseek(fp, 0, SEEK_SET);
     uint32_t magic;
     fread(&magic, 4, 1, fp);
-    printf("What we read was %"PRIu32"\n", magic);
+    printf("What we read was %p\n", &magic);
     
    // fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
