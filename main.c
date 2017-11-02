@@ -36,10 +36,15 @@ void get_input(uint8_t *response){
 }
 
 void print_menu(){
-    fflush(stdin);
     printf("Menu of options:\n");
     printf("    1) Format\n");
     printf("    14) Exit the program\n");
+}
+
+void clear_input(){
+    while(getchar() != '\n'){
+        continue;
+    }
 }
 
 bool handle_response(uint8_t response){
@@ -52,7 +57,7 @@ bool handle_response(uint8_t response){
             format(fileName);
             free(fileName);
             fileName = NULL;
-            while (getchar() != '\n'){}
+            clear_input();
             break;
         case 14:
             return false;
