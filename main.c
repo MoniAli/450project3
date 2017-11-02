@@ -22,6 +22,7 @@ void get_input(uint8_t *response){
         if (!isdigit(buffer[i])){
             alpha = true;
         }
+        i++;
     }
            
 
