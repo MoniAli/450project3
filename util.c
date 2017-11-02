@@ -30,7 +30,7 @@ int8_t format(char* fileName){
     for (i = 0; i < 106; i++){
         sector_fill[i] = 0;
     }
-    (fwrite(&sb.magic, 4, 1, fp) == 1) ? : return -1;
+    (fwrite(&sb.magic, 4, 1, fp) == 1) ? 1 : return -1;
     if(fwrite(&sb.size, 4, 1, fp)) != 1) return -1;
     if(fwrite(&sb.inode_count, 4, 1, fp) != 1 return -1;
     if(fwrite(&sb.datablock_count, 4, 1, fp) != 1 return -1;
