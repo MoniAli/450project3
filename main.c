@@ -13,6 +13,10 @@
 #include "util.h"
 #include "macros.h"
 
+
+char* mount_success = "The file has successfully been mounted";
+char* mount_fail = "The file failed to mount";
+
 void get_input(uint8_t *response){
     char* buffer = malloc(sizeof(char)*10);
     fgets(buffer, 10, stdin);
@@ -54,7 +58,7 @@ bool handle_response(uint8_t response){
             fileName = malloc(sizeof(char)*100);
             printf("Please enter the name of the file that contains the file system ");
             scanf("%99s", fileName);
-            printf("%s\n", format(fileName) == 0 ? "The file has successfully been mounted" : "There was an error mounting the file");
+            printf("%s\n", format(fileName) == 0 ? mount_success : mount_fail);
             free(fileName);
             fileName = NULL;
             clear_input();
