@@ -14,7 +14,7 @@ int8_t format(char* fileName){
     fp = fopen(fileName, "wb");
     
     superBlock_t sb = {0, 0, 0, 0, NULL, NULL};
-    sb.magic = 0xDEADBEEF;
+    sb.magic = 0xABADBABE;
     sb.size = 1;
     sb.inode_count = 9;
     *sb.inode_stats = malloc(sizeof(char)*144);
