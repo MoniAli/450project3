@@ -61,7 +61,7 @@ bool handle_response(uint8_t response){
             break;
         case 14:
             return false;
-            break;
+            break; //style
         default:
             printf("Invalid response, try again\n");
             break;
