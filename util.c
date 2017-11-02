@@ -27,6 +27,10 @@ int8_t format(char* fileName){
     }
     
     fwrite(&sb.magic, 1, 4, fp);
+    fseek(fp, 0, SEEK_SET);
+    uint32_t magic;
+    fread(&magic, 4, 1, fp);
+    printf("What we read was %d\n", magic);
     
    // fwrite(data, 1, NUM_SECTORS * SECTOR_SIZE, fp);
 
