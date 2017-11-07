@@ -66,6 +66,8 @@ int8_t format(char* fileName){
 int8_t mount(char* fileName){
     
     FILE* fp;
+    fp = fopen(fileName, "r");
+    if (fp == NULL) return -1;
     return 0;
 }
 
