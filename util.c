@@ -39,8 +39,14 @@ int8_t format(char* fileName){
     if (fwrite(sector_fill, 1, 106, fp) != 106) return -1;
     
     uint16_t occupied_inode = 0x1111;
+    uint16_t d_inode = 0x3333;
+    uint16_t initial_size = 0;
+    uint8_t empty = 0;
     
     if (fwrite(&occupied_inode, 2, 1, fp) != 1) return -1;
+    if (fwrite(&d_inode, 2, 1, fp) != 1) return -1;
+    if (fwrite(&initial_size, 2, 1, fp) != 1) return -1;
+    if (fwrite(&empty, 1, 26, fp) != 26) return -1;
     
    
     fclose(fp);
