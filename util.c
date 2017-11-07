@@ -39,7 +39,8 @@ int8_t format(char* fileName){
     if (fwrite(sector_fill, 1, 106, fp) != 106) return -1;
     
    
-
+    fclose(fp);
+    fp = NULL;
     return 0;
 }
 
