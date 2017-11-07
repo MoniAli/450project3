@@ -72,7 +72,7 @@ int8_t mount(char* fileName){
     superBlock_t sb = {0, 0, 0, 0, NULL, NULL};
     if (fread(&sb.magic, 4, 1, fp) != 1) return -1;
     
-    if (sb.magic != 0xDEADBEEF) return -1;
+    //if (sb.magic != 0xDEADBEEF) return -1;
     
     return 0;
 }
