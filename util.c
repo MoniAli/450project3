@@ -79,7 +79,7 @@ int8_t format(char* fileName){
     for (i = 0; i < 8; i++){
         if (fwrite(&empty, 1, 512, fp) != 512) return -1;
     }
-    
+    printf("GOT HERE");
     //Write the 246 empty data blocks
     for (i = 0; i < 246; i++){
     if (fwrite(&empty, 1, 512, fp) != 512) return -1;
