@@ -10,7 +10,7 @@
 
 int8_t format(char* fileName){
     FILE *fp;
-    uint_8 i;
+    uint8_t i;
     fp = fopen(fileName, "wb");
     
     superBlock_t sb = {0, 0, 0, 0, NULL, NULL};
