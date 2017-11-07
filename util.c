@@ -117,7 +117,7 @@ int8_t mount(char* fileName){
     for (uint8_t i = 0; i < 144; i++){
         if (fread(&inodes[i].freedom, 2, 1, fp) != 1) return -1;
         if (fread(&inodes[i].size, 2, 1, fp) != 1) return -1;
-        *inodes[i].indexes = malloc(sizeof(char)*26);
+        inodes[i].indexes = malloc(sizeof(char)*26);
         if (fread(inodes[i].indexes, 1, 26, fp) != 26) return -1;
     }
     

@@ -16,7 +16,7 @@
 
 
 typedef struct fileSystem{
-    suberBlock_t sb;
+    superBlock_t sb;
     uint8_t* inode_t[144];
 }fileSystem_t;
 
