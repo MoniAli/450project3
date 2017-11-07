@@ -53,6 +53,8 @@ int8_t format(char* fileName){
         if (fwrite(&empty, 1, 512, fp) != 512) return -1;
     }
     
+    if(fwrite(&empty, 1, 125952, fp) != 125952) return -1;
+    
    
     fclose(fp);
     fp = NULL;
