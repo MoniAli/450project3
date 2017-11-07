@@ -67,7 +67,7 @@ bool handle_response(uint8_t response){
             clear_input();
             break;
         case 2:
-            fileName = malloc(sizeof(char*100));
+            fileName = malloc(sizeof(char)*100));
             printf("Please enter the name of the file that contains the file system ");
             scanf("%99s", fileName);
             printf("%s\n", mount(fileName) == 0 ? m_success : m_fail);
