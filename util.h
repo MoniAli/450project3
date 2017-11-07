@@ -34,8 +34,8 @@ typedef struct superBlock{
 } superBlock_t;
 
 typedef struct fileSystem{
-    superBlock_t sb;
-    uint8_t* inode_t[144];
+    superBlock_t* sb;
+    inode_t* inodes;
 }fileSystem_t;
 
 

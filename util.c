@@ -121,7 +121,10 @@ int8_t mount(char* fileName){
         if (fread(inodes[i].indexes, 1, 26, fp) != 26) return -1;
     }
     
+    fileSystem_t system = malloc(sizeof(fileSystem_t));
     
+    system.sb = &sb;
+    system.inodes = inodes;
     
     
     return 0;
