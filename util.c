@@ -63,3 +63,13 @@ int8_t format(char* fileName){
     return 0;
 }
 
+int8_t mount(char* fileName){
+    return 0;
+}
+
+
+
+
+
+
+

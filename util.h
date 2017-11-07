@@ -24,6 +24,7 @@ typedef struct superBlock{
     uint8_t* datablock_stats[246];
 } superBlock_t;
 
-int8_t format();
+int8_t mount(char* fileName);
+int8_t format(char* fileName);
 
 #endif /* util_h */

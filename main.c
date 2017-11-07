@@ -16,6 +16,8 @@
 
 char* f_success = "The file has successfully been formatted";
 char* f_fail = "The file failed to format";
+char* m_success = "The file has successfully been mounted";
+char* m_fail = "The file has failed to mount";
 
 void get_input(uint8_t *response){
     char* buffer = malloc(sizeof(char)*10);
@@ -41,7 +43,8 @@ void get_input(uint8_t *response){
 
 void print_menu(){
     printf("Menu of options:\n");
-    printf("    1) Format\n");
+    printf("    1) Format a file system\n");
+    printf("    2) Mount a file system\n");
     printf("    14) Exit the program\n");
 }
 
@@ -59,6 +62,15 @@ bool handle_response(uint8_t response){
             printf("Please enter the name of the file that contains the file system ");
             scanf("%99s", fileName);
             printf("%s\n", format(fileName) == 0 ? f_success : f_fail);
+            free(fileName);
+            fileName = NULL;
+            clear_input();
+            break;
+        case 2:
+            fileName = malloc(sizeof(char*100));
+            printf("Please enter the name of the file that contains the file system ");
+            scanf("%99s", fileName);
+            printf("%s\n", mount(fileName) == 0 ? m_success : m_fail);
             free(fileName);
             fileName = NULL;
             clear_input();
