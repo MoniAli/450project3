@@ -15,10 +15,6 @@
 #include "macros.h"
 
 
-typedef struct fileSystem{
-    superBlock_t sb;
-    uint8_t* inode_t[144];
-}fileSystem_t;
 
 typedef struct inode{
     uint16_t freedom;
@@ -36,6 +32,13 @@ typedef struct superBlock{
     uint8_t* inode_stats[144];
     uint8_t* datablock_stats[246];
 } superBlock_t;
+
+typedef struct fileSystem{
+    superBlock_t sb;
+    uint8_t* inode_t[144];
+}fileSystem_t;
+
+
 
 int8_t mount(char* fileName);
 int8_t format(char* fileName);
