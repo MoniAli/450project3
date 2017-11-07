@@ -113,7 +113,7 @@ int8_t mount(char* fileName){
     if (fread(sb.inode_stats, 1, 144, fp) != 144) return -1;
     
     *sb.datablock_stats = malloc(sizeof(char)*246);
-    if (fread(sb.datablock_stats, 1, 246, fp) != 246) != -1;
+    if (fread(sb.datablock_stats, 1, 246, fp) != 246) return -1;
     
     
     
