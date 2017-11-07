@@ -8,7 +8,7 @@
 
 #include "util.h"
 
-fileSystem_t file_sys;
+extern fileSystem_t file_sys;
 
 int8_t format(char* fileName){
     //Open the file and overwrite if currently exists

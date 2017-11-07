@@ -38,7 +38,7 @@ typedef struct fileSystem{
     inode_t* inodes;
 }fileSystem_t;
 
-
+fileSystem_t file_sys;
 
 int8_t mount(char* fileName);
 int8_t format(char* fileName);
