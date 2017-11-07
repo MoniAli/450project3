@@ -9,7 +9,7 @@
 #include "util.h"
 
 
-fileSystem_t system = NULL;
+fileSystem_t system;
 
 int8_t format(char* fileName){
     //Open the file and overwrite if currently exists
