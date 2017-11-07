@@ -20,7 +20,7 @@ typedef struct inode{
     uint16_t freedom;
     uint16_t type;
     uint16_t size;
-    uint8_t indexes[26];
+    uint8_t* indexes[26];
 }inode_t;
 
 
