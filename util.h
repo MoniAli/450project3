@@ -15,6 +15,14 @@
 #include "macros.h"
 
 
+typedef struct inode{
+    uint16_t freedom;
+    uint16_t type;
+    uint16_t size;
+    uint8_t indexes[26];
+}inode_t;
+
+
 typedef struct superBlock{
     uint32_t magic;
     uint32_t size;

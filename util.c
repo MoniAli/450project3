@@ -68,6 +68,12 @@ int8_t mount(char* fileName){
     FILE* fp;
     fp = fopen(fileName, "r");
     if (fp == NULL) return -1;
+    
+    superBlock_t sb = {0, 0, 0, 0, NULL, NULL};
+    if (fread(&sb.magic, 4, 1, fp) != 1) return -1;
+    
+    if (sb.magic != 0xDEADBEEF) return -1;
+    
     return 0;
 }
 
