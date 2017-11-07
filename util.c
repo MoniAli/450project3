@@ -10,7 +10,7 @@
 
 int8_t format(char* fileName){
     FILE *fp;
-    int i;
+    uint_8 i;
     fp = fopen(fileName, "wb");
     
     superBlock_t sb = {0, 0, 0, 0, NULL, NULL};
@@ -49,11 +49,11 @@ int8_t format(char* fileName){
     if (fwrite(&empty, 1, 26, fp) != 26) return -1;
     if (fwrite(&empty, 1, 480, fp) != 480) return -1;
     
-    for (uint8_t i = 0; i < 8; i++){
+    for (i = 0; i < 8; i++){
         if (fwrite(&empty, 1, 512, fp) != 512) return -1;
     }
     
-    for (uint8_t i = 0; i < 246; i++){
+    for (i = 0; i < 246; i++){
     if (fwrite(&empty, 1, 512, fp) != 512) return -1;
     }
     
@@ -64,6 +64,8 @@ int8_t format(char* fileName){
 }
 
 int8_t mount(char* fileName){
+    
+    FILE* fp;
     return 0;
 }
 
