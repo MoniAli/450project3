@@ -8,6 +8,9 @@
 
 #include "util.h"
 
+
+fileSystem_t system = NULL;
+
 int8_t format(char* fileName){
     //Open the file and overwrite if currently exists
     FILE *fp;
@@ -121,9 +124,7 @@ int8_t mount(char* fileName){
         if (fread(inodes[i].indexes, 1, 26, fp) != 26) return -1;
     }
     
-    fileSystem_t system = {&sb, inodes};
-
-    
+    system = {&sb, inodes};
     
     return 0;
 }
