@@ -99,25 +99,30 @@ int8_t mount(char* fileName){
     if (fp == NULL) return -1;
     
     superBlock_t sb = {0, 0, 0, 0, NULL, NULL};
-    if (fread(&sb.magic, 4, 1, fp) != 1) return -1;
-    
-    if (sb.magic != 0xDEADBEEF) return -1;
-    
-    if (fread(&sb.size, 4, 1, fp) != 1) return -1;
-    
-    if (fread(&sb.inode_count, 4, 1, fp) != 1) return -1;
-    
-    if (fread(&sb.datablock_count, 4, 1, fp) != 1) return -1;
-    
-    *sb.inode_stats = malloc(sizeof(char)*144);
-    if (fread(sb.inode_stats, 1, 144, fp) != 144) return -1;
-    
     *sb.datablock_stats = malloc(sizeof(char)*246);
+    *sb.inode_stats = malloc(sizeof(char)*144);
+    
+    if (fread(&sb.magic, 4, 1, fp) != 1) return -1;
+    if (sb.magic != 0xDEADBEEF) return -1;
+    if (fread(&sb.size, 4, 1, fp) != 1) return -1;
+    if (fread(&sb.inode_count, 4, 1, fp) != 1) return -1;
+    if (fread(&sb.datablock_count, 4, 1, fp) != 1) return -1;
+    if (fread(sb.inode_stats, 1, 144, fp) != 144) return -1;
     if (fread(sb.datablock_stats, 1, 246, fp) != 246) return -1;
-    
-    
-    
 
+    inode_t* inodes = malloc(sizeof(inode_t)*144);
+    
+    
+    
+    for (uint8_t i = 0; i < 144; i++){
+        if (fread(&inodes[i].freedom, 2, 1, fp) != 1) return -1;
+        if (fread(&inodes[i].size, 2, 1, fp) != 1) return -1;
+        *inodes[i].indexes = malloc(sizeof(char)*26);
+        if (fread(inodes[i].indexes, 1, 26, fp) != 26) return -1;
+    }
+    
+    
+    
     
     return 0;
 }

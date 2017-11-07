@@ -15,6 +15,11 @@
 #include "macros.h"
 
 
+typedef struct fileSystem{
+    suberBlock_t sb;
+    uint8_t* inode_t[144];
+}fileSystem_t;
+
 typedef struct inode{
     uint16_t freedom;
     uint16_t type;
