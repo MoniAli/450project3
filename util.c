@@ -109,10 +109,10 @@ int8_t mount(char* fileName){
     
     if (fread(&sb.datablock_count, 4, 1, fp) != 1) return -1;
     
-    sb.inode_stats = malloc(sizeof(char)*144);
+    *sb.inode_stats = malloc(sizeof(char)*144);
     if (fread(sb.inode_stats, 1, 144, fp) != 144) return -1;
     
-    sb.datablock_stats = malloc(sizeof(char)*246);
+    *sb.datablock_stats = malloc(sizeof(char)*246);
     if (fread(sb.datablock_stats, 1, 246, fp) != 246) != -1;
     
     
