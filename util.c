@@ -8,8 +8,7 @@
 
 #include "util.h"
 
-
-fileSystem_t file_system;
+fileSystem_t file_sys;
 
 int8_t format(char* fileName){
     //Open the file and overwrite if currently exists
@@ -124,7 +123,7 @@ int8_t mount(char* fileName){
         if (fread(inodes[i].indexes, 1, 26, fp) != 26) return -1;
     }
     
-    extern fileSystem_t file_system = {&sb, inodes};
+    file_sys = {&sb, inodes};
     
     return 0;
 }
