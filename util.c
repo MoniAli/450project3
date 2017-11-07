@@ -124,7 +124,7 @@ int8_t mount(char* fileName){
         if (fread(inodes[i].indexes, 1, 26, fp) != 26) return -1;
     }
     
-    file_system = {&sb, inodes};
+    extern fileSystem_t file_system = {&sb, inodes};
     
     return 0;
 }
