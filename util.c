@@ -38,6 +38,8 @@ int8_t format(char* fileName){
     if (fwrite(sb.datablock_stats, 1, 246, fp) != 246) return -1;
     if (fwrite(sector_fill, 1, 106, fp) != 106) return -1;
     
+    if (fwrite(0x1111, 2, 1, fp) != 1) return -1;
+    
    
     fclose(fp);
     fp = NULL;
