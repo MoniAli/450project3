@@ -28,7 +28,7 @@ int8_t format(char* fileName){
     uint8_t* sector_fill = malloc(sizeof(char)*106);
     
     // The first inode is NOT FREE, contains root directory
-    sb.node_stats[0] = 1;
+    *sb.inode_stats[0] = 1;
     
     //Rest are free
     for (i = 1; i < 144; i++){
@@ -36,7 +36,7 @@ int8_t format(char* fileName){
     }
     
     //The first datablock is NOT FREE, contains root dir data
-    sb.datablock_stats[0] = 1;
+    *sb.datablock_stats[0] = 1;
     
     //Rest are free
     for (i = 1; i < 246; i++){
