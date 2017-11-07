@@ -47,6 +47,11 @@ int8_t format(char* fileName){
     if (fwrite(&d_inode, 2, 1, fp) != 1) return -1;
     if (fwrite(&initial_size, 2, 1, fp) != 1) return -1;
     if (fwrite(&empty, 1, 26, fp) != 26) return -1;
+    if (fwrite(&empty, 1, 480, fp) != 480) return -1;
+    
+    for (uint8_t i = 0; i < 8; i++){
+        fwrite(&empty, 1, 512, fp) != 512) return -1;
+    }
     
    
     fclose(fp);
